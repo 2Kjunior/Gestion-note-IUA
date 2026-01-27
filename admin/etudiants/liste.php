@@ -34,8 +34,8 @@ require_once '../../includes/alerts.php';
     <!-- En-tête avec bouton -->
     <div class="flex justify-between items-center mb-6">
         <h2 class="text-3xl font-bold text-gray-800">🎓 Gestion des étudiants</h2>
-        <a href="<?= BASE_URL ?>/admin/etudiants/ajouter.php" 
-           class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition shadow-md hover:shadow-lg">
+        <a href="<?= BASE_URL ?>/admin/etudiants/ajouter.php"
+            class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-bold transition shadow-lg hover:shadow-xl">
             ➕ Ajouter un étudiant
         </a>
     </div>
@@ -45,12 +45,18 @@ require_once '../../includes/alerts.php';
         <table class="w-full">
             <thead class="bg-gray-50">
                 <tr>
-                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Photo</th>
-                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Matricule</th>
-                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Nom</th>
-                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Prénom</th>
-                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Email</th>
-                    <th class="px-6 py-4 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider">Actions</th>
+                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Photo
+                    </th>
+                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                        Matricule</th>
+                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Nom
+                    </th>
+                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Prénom
+                    </th>
+                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Email
+                    </th>
+                    <th class="px-6 py-4 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                        Actions</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-200">
@@ -65,9 +71,8 @@ require_once '../../includes/alerts.php';
                         <tr class="hover:bg-gray-50 transition">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <?php if (!empty($e['photo'])): ?>
-                                    <img src="<?= BASE_URL ?>/assets/images/etudiants/<?= htmlspecialchars($e['photo']) ?>" 
-                                         alt="Photo" 
-                                         class="w-12 h-12 rounded-full object-cover border-2 border-gray-200">
+                                    <img src="<?= BASE_URL ?>/assets/images/etudiants/<?= htmlspecialchars($e['photo']) ?>"
+                                        alt="Photo" class="w-12 h-12 rounded-full object-cover border-2 border-gray-200">
                                 <?php else: ?>
                                     <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-xl">
                                         🎓
@@ -75,7 +80,8 @@ require_once '../../includes/alerts.php';
                                 <?php endif; ?>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="text-sm font-medium text-gray-900"><?= htmlspecialchars($e['Matriculation']) ?></span>
+                                <span
+                                    class="text-sm font-medium text-gray-900"><?= htmlspecialchars($e['Matriculation']) ?></span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span class="text-sm text-gray-700"><?= htmlspecialchars($e['nomEt']) ?></span>
@@ -87,11 +93,11 @@ require_once '../../includes/alerts.php';
                                 <span class="text-sm text-gray-600"><?= htmlspecialchars($e['Email'] ?? '-') ?></span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="<?= BASE_URL ?>/admin/etudiants/modifier.php?matricule=<?= urlencode($e['Matriculation']) ?>" 
-                                   class="text-blue-600 hover:text-blue-900 mr-4">✏️ Modifier</a>
+                                <a href="<?= BASE_URL ?>/admin/etudiants/modifier.php?matricule=<?= urlencode($e['Matriculation']) ?>"
+                                    class="text-blue-600 hover:text-blue-900 mr-4">✏️ Modifier</a>
                                 <a href="<?= BASE_URL ?>/admin/etudiants/supprimer.php?matricule=<?= urlencode($e['Matriculation']) ?>"
-                                   onclick="return confirm('Supprimer cet étudiant ?');"
-                                   class="text-red-600 hover:text-red-900">🗑️ Supprimer</a>
+                                    onclick="return confirm('Supprimer cet étudiant ?');"
+                                    class="text-red-600 hover:text-red-900">🗑️ Supprimer</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -101,8 +107,7 @@ require_once '../../includes/alerts.php';
     </div>
 
     <div class="mt-6">
-        <a href="<?= BASE_URL ?>/admin/index.php" 
-           class="text-gray-600 hover:text-navy transition">
+        <a href="<?= BASE_URL ?>/admin/index.php" class="text-gray-600 hover:text-navy transition">
             ⬅ Retour dashboard admin
         </a>
     </div>

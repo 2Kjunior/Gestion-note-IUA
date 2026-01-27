@@ -14,7 +14,7 @@
                 <span class="text-3xl">🎓</span>
                 <a href="/gestion-notes-iua - Copy/index.php"
                    class="text-xl font-bold text-white hover:text-blue-200 transition">
-                    <span class="hidden md:inline">GESTION NOTES IUA</span>
+                    <span class="hidden md:inline">JUNIX NOTE</span>
                     <span class="md:hidden">IUA</span>
                 </a>
             </div>

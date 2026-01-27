@@ -21,8 +21,8 @@ require_once __DIR__ . '/../../includes/alerts.php';
     <!-- En-tête avec bouton -->
     <div class="flex justify-between items-center mb-6">
         <h2 class="text-3xl font-bold text-gray-800">📘 Gestion des matières</h2>
-        <a href="<?= BASE_URL ?>/admin/matieres/ajouter.php" 
-           class="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition shadow-md hover:shadow-lg">
+        <a href="<?= BASE_URL ?>/admin/matieres/ajouter.php"
+            class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg font-bold transition shadow-lg hover:shadow-xl">
             ➕ Ajouter une matière
         </a>
     </div>
@@ -32,10 +32,14 @@ require_once __DIR__ . '/../../includes/alerts.php';
         <table class="w-full">
             <thead class="bg-gray-50">
                 <tr>
-                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Code</th>
-                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Libellé</th>
-                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Crédits</th>
-                    <th class="px-6 py-4 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider">Actions</th>
+                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Code
+                    </th>
+                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Libellé
+                    </th>
+                    <th class="px-6 py-4 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Crédits
+                    </th>
+                    <th class="px-6 py-4 text-right text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                        Actions</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-200">
@@ -55,16 +59,17 @@ require_once __DIR__ . '/../../includes/alerts.php';
                                 <span class="text-sm text-gray-700"><?= e($matiere['libelleMat']) ?></span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                <span
+                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
                                     <?= e($matiere['credits']) ?> crédits
                                 </span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="<?= BASE_URL ?>/admin/matieres/modifier.php?code=<?= urlencode($matiere['codeMat']) ?>" 
-                                   class="text-blue-600 hover:text-blue-900 mr-4">✏️ Modifier</a>
+                                <a href="<?= BASE_URL ?>/admin/matieres/modifier.php?code=<?= urlencode($matiere['codeMat']) ?>"
+                                    class="text-blue-600 hover:text-blue-900 mr-4">✏️ Modifier</a>
                                 <a href="<?= BASE_URL ?>/admin/matieres/supprimer.php?code=<?= urlencode($matiere['codeMat']) ?>"
-                                   onclick="return confirm('Supprimer cette matière ?');"
-                                   class="text-red-600 hover:text-red-900">🗑️ Supprimer</a>
+                                    onclick="return confirm('Supprimer cette matière ?');"
+                                    class="text-red-600 hover:text-red-900">🗑️ Supprimer</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -74,8 +79,7 @@ require_once __DIR__ . '/../../includes/alerts.php';
     </div>
 
     <div class="mt-6">
-        <a href="<?= BASE_URL ?>/admin/index.php" 
-           class="text-gray-600 hover:text-navy transition">
+        <a href="<?= BASE_URL ?>/admin/index.php" class="text-gray-600 hover:text-navy transition">
             ⬅️ Retour dashboard
         </a>
     </div>
