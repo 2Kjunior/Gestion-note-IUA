@@ -455,5 +455,3 @@ Pour toute question ou problème :
 ---
 
 **Bonne évaluation ! 🎓**
-#   G e s t i o n - n o t e - I U A  
- 
